@@ -1,5 +1,6 @@
 ---
-title: Home
+layout: blog
+title: "Let's Party"
 home: true
 # heroImage: /hero.png
 # heroText: 提亞的部落格
