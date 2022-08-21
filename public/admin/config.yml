@@ -1,6 +1,6 @@
 backend:
   name: cms_of_multiple_blogs
-  branch: master
+  branch: main
 
 media_folder: "public/images/uploads"
 
