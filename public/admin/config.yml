@@ -7,9 +7,25 @@ publish_mode: editorial_workflow
 media_folder: "public/images/uploads"
 
 collections:
-  - name: "blog" # Used in routes, e.g., /admin/collections/blog
-    label: "Blog" # Used in the UI
+  - name: "live" # Used in routes, e.g., /admin/collections/blog
+    label: "live" # Used in the UI
     folder: "blog/live" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "webDevelopment" # Used in routes, e.g., /admin/collections/blog
+    label: "webDevelopment" # Used in the UI
+    folder: "blog/webDevelopment" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "webLayout" # Used in routes, e.g., /admin/collections/blog
+    label: "webLayout" # Used in the UI
+    folder: "blog/webDevelopment/layout" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     fields: # The fields for each document, usually in front matter
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
